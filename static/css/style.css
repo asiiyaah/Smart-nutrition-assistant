@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Caveat:wght@400..700&family=Momo+Signature&family=Playwrite+NZ+Guides&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arvo", serif;
+    font-weight: 700;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    width: 95vw;
+    height: 50vh;
+    border: 0.5px solid rgb(170, 170, 170);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+
+.header {
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; 
+   background-color: #51A440;
+   color: white;
+   font-size: 20px;
+   padding: 8px;
+   border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    
+}
+.main{
+    height: 50vh;
+    display: flex;
+    gap: 5px;
+}
+
+.nutrition{
+    background-color:white;
+     width: 50%;
+     height: 50%;
+      display: flex;
+      border-right: 0.1px solid rgb(243, 243, 243);
+     flex-direction: column;
+}
+     
+     .nutrition .nutrition-body{
+        display: flex;
+        flex-direction: column;
+         padding: 20px;
+     }
+
+    .nutrition h2{
+        font-weight: 900;
+        font-size: 35px;
+     }
+     .nutrition h3{
+        font-weight: 500;
+        font-size: 30px;
+        color: black;
+     }
+
+    
+.meal{
+    background-color: white;
+     width: 50%;
+     height: 50%;
+     display: flex;
+     flex-direction: column;
+}
+    
+    .meal .meal-body{
+        display: flex;
+        flex-direction: column;
+         padding: 20px;
+     }
+      .meal h2{
+        font-weight: 900;
+        font-size: 35px;
+     }
+     .meal h3{
+        font-weight: 500;
+        font-size: 30px;
+        color: black;
+     }
+
+input[type="text"]{
+    width: 80%;
+    height: 45px;
+    margin: 10px auto;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 2px;
+    font-size: 25px;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #ff6a00;
+    box-shadow: 0 0 6px rgba(255, 106, 0, 0.5);
+}
+
+.result {
+    width: 40%;
+    height: 45px;
+    border-radius: 10px;
+    background: linear-gradient(to right, #ff9a3c, #ff6a00);
+    color: white;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.result:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.result1{
+    display: flex;
+    justify-content: center;
+}
+.head{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 35px;
+        height: 45px;
+        background: linear-gradient(to right, #ff9a3c, #ff6a00);
+        color: black;
+        border: none;
+    }
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .content {
+        width: 100%;
+        height: auto;
+    }
+
+    .header {
+        font-size: 10px;
+        text-align: center;
+        padding: 12px;
+    }
+
+    .main {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .nutrition,
+    .meal {
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #eee;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    input[type="text"] {
+        width: 90%;
+        font-size: 16px;
+    }
+
+    .result {
+        width: 70%;
+        font-size: 16px;
+    }
+
+    .head {
+        font-size: 20px;
+    }
+}
