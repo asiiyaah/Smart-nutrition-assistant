@@ -17,23 +17,40 @@
             <div class="nutrition">
                 <button class="head">Nutrition Finder </button>
                 <div class="nutrition-body">
-                <h2>Find nutrition details</h2>
-                <h3>Enter your food item:</h3>
-                <input type="text" placeholder="Eg:Scrambled Eggs ">
-                <div class="result1">
-                <button class="result">Analyze Nutrition</button>
-                </div>
+                    <h2>Find nutrition details</h2>
+                    <h3>Enter your food item:</h3>
+                    <form action="/nutrition" method="POST">
+                        <input type="text" placeholder="Eg:Scrambled Eggs ">
+                        <div class="result1">
+                            <button class="result">Analyze Nutrition</button>
+                        </div>
+                    </form>
+                    {% if nutrition_result %}
+                    <div class="result1">
+                        <p><b>Calories:</b> {{ nutrition_result.calories }}</p>
+                        <p><b>Protein:</b> {{ nutrition_result.protein }}</p>
+                        <p><b>Category:</b> {{ nutrition_result.category }}</p>
+                    </div>
+                    {% endif %}
                 </div>
             </div>
             <div class="meal">
                 <button class="head">Meal Generator</button>
                 <div class="meal-body">
-                <h2>Generate a meal</h2>
-                <h3>Enter your ingredients:</h3>
-                <input type="text" placeholder="Eg:Tomato,Eggs,Onion">
-                <div class="result1">
-                <button class="result">Generate Meal</button>
-                </div>
+                    <h2>Generate a meal</h2>
+                    <h3>Enter your ingredients:</h3>
+                    <form action="/meal" method="POST">
+                        <input type="text" placeholder="Eg:Tomato,Eggs,Onion">
+                        <div class="result1">
+                            <button class="result">Generate Meal</button>
+                        </div>
+                    </form>
+
+                    {% if meal_result %}
+                    <div class="result1">
+                        <p><b>Suggested Meal:</b> {{ meal_result }}</p>
+                    </div>
+                    {% endif %}
                 </div>
             </div>
         </div>
